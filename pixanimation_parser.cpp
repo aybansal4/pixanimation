@@ -78,7 +78,6 @@ int main(int argc, char* argv[]) {
             else if (c == '1') outputFile << "white\n";
             else if (c == '0') outputFile << "black\n";
             else if (c == '\n') outputFile << "new pixel row\n";
-            else if (c == ':') outputFile << "end of frame\n";
             else outputFile << "error\n";
         }
         outputFile << "\n";
