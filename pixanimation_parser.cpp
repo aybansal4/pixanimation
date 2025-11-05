@@ -61,7 +61,7 @@ int main(int argc, char* argv[]) {
         sections.push_back(section);
     }
     sections.erase(sections.begin());
-    std::cout << "Processing input file and generating output file: " << outputFileName << std::endl;
+    std::cout << "Processing input file and generating output file: " << outputFileName << "\n";
 
     for (const auto& sec : sections) {
         for (char c : sec) {
@@ -80,7 +80,7 @@ int main(int argc, char* argv[]) {
             else if (c == '\n') outputFile << "new pixel row\n";
             else outputFile << "error\n";
         }
-        outputFile << "\n";
+        outputFile << "end of frame\n\n";
     }
 
     outputFile.close();
