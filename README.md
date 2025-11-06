@@ -106,7 +106,7 @@ PixAnimation Demo - Rainbow Pulse Animation v1
 - **Special Thanks:**  
   - FFmpeg contributors for making video handling simple and robust.  
   - Open-source communities for inspiration and support.  
-- This software uses code of [FFmpeg](http://ffmpeg.org) licensed under the [LGPLv2.1](http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html) and its source can be downloaded [here](link_to_your_sources).  
+- This software uses code of [FFmpeg](http://ffmpeg.org) licensed under the [LGPLv2.1](http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html) and its source can be downloaded [here](https://rawgithubusercontent.com/aybansal4/pixanimation/blob/main/pixanimation_parser.cpp).  
 ### ✅ Summary
 
 PixAnimation is open for personal, educational, and commercial use, as long as credit is given and the license terms are followed. Enjoy creating pixel animations!
