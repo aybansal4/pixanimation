@@ -89,10 +89,10 @@ PixAnimation Demo - Rainbow Pulse Animation v1
 0000000000
 0000000000
 0000000000
-0000000rr0y
-0000000rroy
-000000rroyg
-000000rroygb
+0000000rr0
+0000000rro
+000000rroy
+000000rroy
 ```
 
 # PixAnimation - Credits & License
