@@ -1,0 +1,36 @@
+{
+    {
+  "configurations": [
+    {
+      "name": "Mac",
+      "compilerPath": "/usr/bin/clang++",
+      "intelliSenseMode": "macos-clang-x64",
+      "cStandard": "c23",
+      "cppStandard": "c++23",
+      "includePath": [
+        "${workspaceFolder}/**"
+      ]
+    },
+    {
+      "name": "Linux",
+      "compilerPath": "/usr/bin/g++",
+      "intelliSenseMode": "linux-gcc-x64",
+      "cStandard": "c23",
+      "cppStandard": "c++23",
+      "includePath": [
+        "${workspaceFolder}/**"
+      ]
+    }
+    {
+      "name": "Windows",
+      "compilerPath": "C:/MinGW/bin/g++.exe",
+      "intelliSenseMode": "windows-gcc-x64",
+      "cStandard": "c23",
+      "cppStandard": "c++23",
+      "includePath": [
+        "${workspaceFolder}/**"
+      ]
+    }
+  ],
+  "version": 4
+}
