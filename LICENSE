@@ -1,18 +1,9 @@
-Copyright 2025 Ayan Bansal
+Permission: Anyone may use, copy, modify, merge, publish, distribute, sublicense, and sell the software.
 
-You are allowed to:
+Condition: You must include the original copyright notice and license text in all copies or substantial portions.
 
-✅ Use this code for personal, non-commercial purposes.
+Warranty / liability: The software is provided "as is" without warranty; authors are not liable for damages.
 
-You are NOT allowed to:
+Note: Adding an MIT LICENSE file to your repo does not remove third‑party obligations (e.g., if you distribute binaries linked with GPL/LGPL FFmpeg builds you may still have to comply with those licenses). Consult legal counsel for redistribution questions.
 
-❌ Modify or change the code in any way  
-❌ Sell or distribute this code  
-❌ Use this code in commercial projects  
-❌ Remove this license or copyright notice
-
-This software is provided "as is", with no warranties or guarantees of any kind.
-
-If you want to use this code in a commercial project or need special permission, please contact me at ayanbansal4@gmail.com.
-
-By using this code, you agree to follow these terms.
+To view full license, go to: https://opensource.org/licenses/MIT

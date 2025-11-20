@@ -4,6 +4,12 @@
 #include <vector>
 
 int main(int argc, char* argv[]) {
+    extern "C" {
+        #include <libs/libavcodec/avcodec.h>
+        #include <libs/libavformat/avformat.h>
+        #include <libs/libavutil/avutil.h>
+        av_register_all();
+    }
     std::string inputFileName;
     std::string outputFileName = "out.mp4";
 
@@ -26,7 +32,7 @@ int main(int argc, char* argv[]) {
                     return 1;
                 }
             } else if (a == "-s" || a == "--syntax") {
-                std::cout << "Syntax guide: frames separated by ':'; colors as r/g/b/y/o/v (or uppercase), 1 = white, 0 = black, ';' = end of frame, newline for new row\n";
+                std::cout << "Syntax colors as r/g/b/y/o/v (or uppercase), 1 = white, 0 = black, ':' = end of frame, newline for new row\n";
                 return 0;
             } else if (a.size() > 0 && a[0] == '-') {
                 std::cerr << "Unknown option: " << a << "\n";
@@ -61,7 +67,7 @@ int main(int argc, char* argv[]) {
         sections.push_back(section);
     }
     sections.erase(sections.begin());
-    std::cout << "Processing input file and generating output file: " << outputFileName << "\n";
+    std::cout << "Processing input file and generating output file: " << outputFileName << std::endl;
 
     for (const auto& sec : sections) {
         for (char c : sec) {
@@ -80,7 +86,7 @@ int main(int argc, char* argv[]) {
             else if (c == '\n') outputFile << "new pixel row\n";
             else outputFile << "error\n";
         }
-        outputFile << "end of frame\n\n";
+        outputFile << "Detected end of frame\n";
     }
 
     outputFile.close();
