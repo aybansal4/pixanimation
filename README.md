@@ -103,11 +103,12 @@ PixAnimation Demo - Rainbow Pulse Animation v1
 
 ## 👥 Credits
 
-- **Project Author:** [Ayan Bansal](mailto:ayanbansal4@gmail.com)  
+- **Project Authors:** [Ayan Bansal](mailto:ayanbansal4@gmail.com), Lynn Becker  
 - **C++ Implementation:** Developed using the Standard Library, `fstream`, and FFmpeg integration.  
 - **Special Thanks:**  
   - FFmpeg contributors for making video handling simple and robust.  
-  - Open-source communities for inspiration and support.  
+  - Open-source communities for inspiration and support.
+  - Lynn Becker for the analyzer in analyzer.cpp and for being my coding teacher
 - This software uses code of [FFmpeg](http://ffmpeg.org) licensed under the [LGPLv2.1](http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html) and its source can be downloaded [here](https://rawgithubusercontent.com/aybansal4/pixanimation/blob/main/pixanimation_parser.cpp).  
 ### ✅ Summary
 
