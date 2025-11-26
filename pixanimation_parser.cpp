@@ -2,6 +2,7 @@
 #include <fstream>
 #include <string>
 #include <vector>
+#include <cctype>
 
 int main(int argc, char* argv[]) {
     extern "C" {
@@ -10,7 +11,6 @@ int main(int argc, char* argv[]) {
     }
     std::string inputFileName;
     std::string outputFileName = "out.mp4";
-
     if (argc > 1) {
         for (int i = 1; i < argc; ++i) {
             std::string a = argv[i];
@@ -21,7 +21,12 @@ int main(int argc, char* argv[]) {
                           << "  --help, -h               Show this help message\n"
                           << "  -o, --output <file>      Specify output file (default: out.mp4)\n"
                           << "  --syntax, -s             Show syntax guide\n";
+                          << "  -d, --debug              Enable debug file (debug.txt)";
                 return 0;
+            } else if (a == "-d" || a == "--debug") {
+                if (i + 1 < argc) {
+                    std::ofstream debugFile("debug.txt", std::ios::binary);
+                }
             } else if (a == "-o" || a == "--output") {
                 if (i + 1 < argc) {
                     outputFileName = argv[++i];
@@ -73,22 +78,44 @@ int main(int argc, char* argv[]) {
             if (c == ' ' || c == '\t') continue;
 
             outputFile << "Detected ";
-            if (c == 'r' || c == 'R') outputFile << "red\n";
-            else if (c == 'o' || c == 'O') outputFile << "orange\n";
-            else if (c == 'y' || c == 'Y') outputFile << "yellow\n";
-            else if (c == 'g' || c == 'G') outputFile << "green\n";
-            else if (c == 'b' || c == 'B') outputFile << "blue\n";
-            else if (c == 'v' || c == 'V') outputFile << "violet\n";
-            else if (c == '1') outputFile << "white\n";
-            else if (c == '0') outputFile << "black\n";
-            else if (c == '\n') outputFile << "new pixel row\n";
-            else outputFile << "error\n";
+            if (c == 'r' || c == 'R') {
+                debugFile << "red\n";
+            }
+            else if (c == 'o' || c == 'O') {
+                debugFile << "orange\n";
+            }
+            else if (c == 'y' || c == 'Y') {
+                debugFile << "yellow\n";
+            }
+            else if (c == 'g' || c == 'G') {
+                debugFile << "green\n";
+            }
+            else if (c == 'b' || c == 'B') {
+                debugFile << "blue\n";
+            }
+            else if (c == 'v' || c == 'V') {
+                debugFile << "violet\n";
+            }
+            else if (c == '1') {
+                debugFile << "white\n";
+            }
+            else if (c == '0') {
+                debugFile << "black\n";
+            }
+            else if (c == '\n') {
+                debugFile << "new pixel row\n";
+            }
+            else {
+                outputFile << "error\n";
+            }
         }
         outputFile << "Detected end of frame\n";
     }
 
     outputFile.close();
     inputFile.close();
+    if (debugFile.is_open()) debugFile.close();
     return 0;
 }
+
 
