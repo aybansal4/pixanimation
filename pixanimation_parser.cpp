@@ -5,9 +5,7 @@
 
 int main(int argc, char* argv[]) {
     extern "C" {
-        #include <libs/libavcodec/avcodec.h>
-        #include <libs/libavformat/avformat.h>
-        #include <libs/libavutil/avutil.h>
+        #include <libs/libs.h>
         av_register_all();
     }
     std::string inputFileName;
@@ -93,3 +91,4 @@ int main(int argc, char* argv[]) {
     inputFile.close();
     return 0;
 }
+
