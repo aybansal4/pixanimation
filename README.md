@@ -6,7 +6,6 @@ PixAnimation is a lightweight C++ animation tool that allows you to create pixel
 
 ## ⚙️ Features
 
-<<<<<<< HEAD
 - **Extension-agnostic input:** Accepts any file extension
 =======
 - **Extension-agnostic input:** Accepts any file extension.  
