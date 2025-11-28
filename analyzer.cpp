@@ -1,4 +1,3 @@
-(base) lwb2@localhost:~/projects/pixa$ cat pixa2.cpp
 #include <iostream>
 #include <iomanip> // For std::fixed and std::setprecision
 
@@ -17,12 +16,6 @@ int main(int argc, char **argv) {
 
     const char* filename = argv[1];
     AVFormatContext *pFormatContext = nullptr;
-
-    // --- MODERN FFmpeg: av_register_all() is deprecated and removed. ---
-    // Libraries are initialized automatically.
-
-    // Open the media file
-    // The last two arguments are for format specification and options, set to nullptr for auto-detection
     if (avformat_open_input(&pFormatContext, filename, nullptr, nullptr) != 0) {
         std::cerr << "Could not open file " << filename << std::endl;
         return -1;
