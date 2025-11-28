@@ -24,9 +24,7 @@ int main(int argc, char* argv[]) {
                           << "  -d, --debug              Enable debug file (debug.txt)";
                 return 0;
             } else if (a == "-d" || a == "--debug") {
-                if (i + 1 < argc) {
-                    std::ofstream debugFile("debug.txt", std::ios::binary);
-                }
+                std::ofstream debugFile("debug.txt", std::ios::binary);
             } else if (a == "-o" || a == "--output") {
                 if (i + 1 < argc) {
                     outputFileName = argv[++i];
@@ -106,7 +104,7 @@ int main(int argc, char* argv[]) {
                 debugFile << "new pixel row\n";
             }
             else {
-                outputFile << "error\n";
+                debugFile << "error\n";
             }
         }
         outputFile << "Detected end of frame\n";
@@ -117,5 +115,6 @@ int main(int argc, char* argv[]) {
     if (debugFile.is_open()) debugFile.close();
     return 0;
 }
+
 
 
